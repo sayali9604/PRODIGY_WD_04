@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/aebb8a72e6.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="header" >
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-rectangle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Software Engineer and Frontend developer</p>
+                <h1>Hi,I am Sayali Sakharkar.</h1>
+            </div>
+        </div>
+    </div>
+<!----------------------about----------------->
+       <div id="about">
+           <div class="container">
+               <div class="row">
+                <div class="about-col-1">
+                    
+                </div>
+                <div class="about-col-2">
+                    <h1  class="sub-title">About Me</h1>
+                    <p>My name is Sayali Sakharkar from Maharashtra.<br>I am pursuing engineering in Electronics 
+                        & Telecommunication.<br>I have knowledge of Hardware as well as Software.</p>
+                        <div class="tab-title">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                        <div class="tabcontents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>Designing a Web Interface</li>
+                                <li><span>Data Analyst</span><br>Working on Data using Python</li>
+                                <li><span>Software Skills </span><br>Knowledge of Different Coding language </li>
+                                
+                            </ul>
+                        </div>
+                        <div class="tabcontents" id="Experience">
+                            <ul>
+                                <li><span>Web Developer</span><br>Worked on Different Project</li>
+                                <li><span>Data Analyst in Edulyt India</span><br>Worked on Data using Python & its Different Libraries</li>
+                            </ul>
+                        </div>        
+                        
+                        
+                        <div class="tabcontents" id="Education">
+                            <ul>
+                                <li><span>2019</span><br>SSC :89.60%</li>
+                                <li><span>2021</span><br>HSC:91%</li>
+                                <li><span>Current(2024)</span><br>Enineering in EnTC Domain.</li>
+                            </ul>    
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+<!---------------Service---------->  
+<div id="services">
+    <div class="container">
+        <h1  class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>Different Projects on Frontend and Backend Development.<br>Portfolio,Weather App,Tic-Tac-Toe game<br>
+                etc.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>Data Analyst</h2>
+                <p>We are here to manipulate your Data and work different operation on it.
+                    <br>To Showcase my talent I have a Project based on Data Analysis.
+                </p>
+                <a href="#">learn more</a>
+            </div>
+
+        </div>
+
+    </div>
+</div>   
+<!------------contact-----------> 
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>sayalisakharkar001@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>1234567891</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/Resume.jpeg" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right"> 
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name"required>
+                    <input type="email" name="E-mail"placeholder="Your E-mail"required>
+                    <textarea name="Message"  rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    
+</div>
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tabcontents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script> 
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right= "0";
+    }
+    function closemenu(){
+        sidemenu.style.right= "-200px";
+    }
+</script>     
+    
+</body>
+</html>
